@@ -1,7 +1,6 @@
 package com.prueba.ntt.payments.adapter.out.persistence;
 
-import java.math.BigDecimal;
-import java.util.Date;
+import java.time.LocalDateTime;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -28,13 +27,13 @@ public class PaymentEntity {
 	private Long idUser;
 	
 	@Column(name="ammount")
-	private BigDecimal ammount;
+	private Double ammount;
 	
 	@Column(name="card_number")
 	private String cardNumber;
 	
 	@Column(name="payment_date")
-	private Date paymentDate;
+	private LocalDateTime paymentDate;
 	
 	
 }
