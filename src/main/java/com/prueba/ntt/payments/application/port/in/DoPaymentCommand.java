@@ -17,7 +17,7 @@ import lombok.Setter;
 public class DoPaymentCommand {
 	
 	BigDecimal ammount;
-	String creaditCard;
+	String creditCard;
 	String description;
 	Date paymentDate;
 	Long idUser;

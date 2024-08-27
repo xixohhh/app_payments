@@ -2,6 +2,7 @@ package com.prueba.ntt.payments.application.service;
 
 import org.springframework.stereotype.Component;
 
+import com.prueba.ntt.payments.application.exception.UserNotFoundException;
 import com.prueba.ntt.payments.application.port.in.DoPaymentCommand;
 import com.prueba.ntt.payments.application.port.in.DoPaymentPort;
 import com.prueba.ntt.payments.application.port.out.LoadPaymentPort;
@@ -34,11 +35,12 @@ public class DoPaymentService implements DoPaymentPort{
 		
 		
 		if(user == null){
-			 throw new RuntimeException("Ocurrio un error...");
+			 throw new UserNotFoundException("No se encuentra el usuario.");
 		}
+		
 		UserPayment payment = new UserPayment();
 		payment.setIdUser(user.getIdUser());
-		payment.setCardNumber(command.getCreaditCard());
+		payment.setCardNumber(command.getCreditCard());
 		payment.setPaymentDate(command.getPaymentDate());
 		payment.setAmmount(command.getAmmount());
 		

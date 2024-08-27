@@ -34,7 +34,7 @@ public class PaymentPersistenceAdapter implements LoadPaymentPort,LoadUserPort,L
 	@Override
 	public User load(Long id) {
 		
-		return usersRepository.findById(id).map(UserMapper::entityToDomain).orElseThrow(RuntimeException::new);
+		return usersRepository.findById(id).map(UserMapper::entityToDomain).orElse(null);
 	}
 
 
