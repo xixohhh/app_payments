@@ -1,7 +1,6 @@
 package com.prueba.ntt.payments.domain;
 
-import java.math.BigDecimal;
-import java.util.Date;
+import java.time.LocalDateTime;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -16,10 +15,10 @@ public class UserPayment {
 
 	private Long idUser;
 
-	private BigDecimal ammount;
+	private Double ammount;
 
 	private String cardNumber;
 
-	private Date paymentDate;
+	private LocalDateTime paymentDate;
 
 }

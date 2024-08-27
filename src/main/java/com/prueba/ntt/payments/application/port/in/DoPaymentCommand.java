@@ -1,7 +1,6 @@
 package com.prueba.ntt.payments.application.port.in;
 
-import java.math.BigDecimal;
-import java.util.Date;
+import java.time.LocalDateTime;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -16,10 +15,10 @@ import lombok.Setter;
 @Setter
 public class DoPaymentCommand {
 	
-	BigDecimal ammount;
+	Double ammount;
 	String creditCard;
 	String description;
-	Date paymentDate;
+	LocalDateTime paymentDate;
 	Long idUser;
 	
 }

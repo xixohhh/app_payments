@@ -8,6 +8,13 @@ F:\wokspaces\repo_git\src\main\java\com\prueba\ntt\payments\adapter\out\persiste
 F:\wokspaces\repo_git\src\main\java\com\prueba\ntt\payments\adapter\out\persistence\UserMapper.java
 F:\wokspaces\repo_git\src\main\java\com\prueba\ntt\payments\adapter\out\persistence\UsersPaymentRepository.java
 F:\wokspaces\repo_git\src\main\java\com\prueba\ntt\payments\adapter\out\persistence\UsersRepository.java
+F:\wokspaces\repo_git\src\main\java\com\prueba\ntt\payments\AppConstanst.java
+F:\wokspaces\repo_git\src\main\java\com\prueba\ntt\payments\application\exception\BodyRequestMissingException.java
+F:\wokspaces\repo_git\src\main\java\com\prueba\ntt\payments\application\exception\ErrorResponse.java
+F:\wokspaces\repo_git\src\main\java\com\prueba\ntt\payments\application\exception\ExceptionController.java
+F:\wokspaces\repo_git\src\main\java\com\prueba\ntt\payments\application\exception\GenericAppException.java
+F:\wokspaces\repo_git\src\main\java\com\prueba\ntt\payments\application\exception\PaymentAmmountInvalidException.java
+F:\wokspaces\repo_git\src\main\java\com\prueba\ntt\payments\application\exception\UserNotFoundException.java
 F:\wokspaces\repo_git\src\main\java\com\prueba\ntt\payments\application\port\in\DoPaymentCommand.java
 F:\wokspaces\repo_git\src\main\java\com\prueba\ntt\payments\application\port\in\DoPaymentPort.java
 F:\wokspaces\repo_git\src\main\java\com\prueba\ntt\payments\application\port\in\UserPaymentsPort.java
@@ -22,3 +29,4 @@ F:\wokspaces\repo_git\src\main\java\com\prueba\ntt\payments\common\WebAdapter.ja
 F:\wokspaces\repo_git\src\main\java\com\prueba\ntt\payments\domain\User.java
 F:\wokspaces\repo_git\src\main\java\com\prueba\ntt\payments\domain\UserPayment.java
 F:\wokspaces\repo_git\src\main\java\com\prueba\ntt\payments\PaymentsAppApplication.java
+F:\wokspaces\repo_git\src\main\java\com\prueba\ntt\payments\SwaggerConfig.java
