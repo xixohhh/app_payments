@@ -17,7 +17,7 @@ import lombok.Setter;
 @Setter
 public class PaymentDTO {
 	BigDecimal ammount;
-	String creaditCard;
+	String creditCard;
 	String description;
 	Date paymentDate;
 }
