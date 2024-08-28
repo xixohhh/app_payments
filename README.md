@@ -58,10 +58,8 @@ Se utiliza la herramienta/plugin JACOCO integrado con Maven, que se encarga de r
 5.- Desde consola, en el repositorio git donde descargamos el proyecto, ejecutamos el comando " docker compose up -d " y esperamos que cargue los contenedores (Si es la primera vez tarda un poco).
 
 OPCIONAL SI OCURRE ERROR: 
-
 -- Crear una red de docker para comunicar los contenedores
-network create app-nttdata-network --driver bridge
-
+ ```network create app-nttdata-network --driver bridge ```
 
 - PASOS PARA EJECUTAR LA APLICACION EN LOCAL/ECPLIPSE
 
@@ -75,24 +73,23 @@ password:1234
 1.- Descargar el proyecto con el comando git " clone https://github.com/xixohhh/app_payments.git " en la ruta donde queremos alojar el repositorio en local. La rama de debemos descargar es RAMA.
 2.- Importar el proyecto en eclipse mediante la herramienta de importacion seleccionando un proyecto Maven existente.
 3.- Comprobar que el archivo application.properties la propiedad spring.datasource.url es:
- 		-> spring.datasource.url=jdbc:postgresql://localhost:5432/postgres?currentSchema=payments-db
+ 	```spring.datasource.url=jdbc:postgresql://localhost:5432/postgres?currentSchema=payments-db ```
 4.- Levantar una base de datos PostgreSQL con el comando siguiente:
 
 4.1.-- Crear una red de docker para comunicar el contenedor con localhost
-		network create app-nttdata-network --driver bridge
+	```network create app-nttdata-network --driver bridge ```
 4.2-- Levantar el contenedor
-		docker run --name postgresql-server --network app-nttdata-network -p 5432:5432 --env=POSTGRESQL_PASSWORD=1234 bitnami/postgresql:16 
+	 ```docker run --name postgresql-server --network app-nttdata-network -p 5432:5432 --env=POSTGRESQL_PASSWORD=1234 bitnami/postgresql:16  ```
 
 5.- Ejecutamos el script que se encuentra en la raíz del proyecto/db/database.sql
 
 6.- Ejecutamos el fichero /payments/src/main/java/com/prueba/ntt/payments/PaymentsAppApplication.java que es la clase de inicio de la aplicación spring boot.
 
 
-PROBAR INFORME JOCOCO
+- PROBAR INFORME JOCOCO
 
 Para que al construir la aplicación con Maven se genere el informe de cobertura de test, debemos lanzar el siguiente comando Maven:
-
-mvn clean install verify
+ ```mvn clean install verify ```
 
 En la ruta target/site/jacoco/ se generara dicha información en HTML, que podemos consultar ejecutando index.hmtl.
 
@@ -107,15 +104,17 @@ POST: "localhost:8080/api/v1.0/users/0/payment" - Añadir un pago con tarjeta de
 
 Payload/Body:
 
+ ```
 {
 "ammount":18.51,
 "creaditCard":"232313131311",
 "description":"asdada",
 "paymentDate":"2024-05-12T02:00:00"
 }
+```
 
 GET: "localhost:8080/api/v1.0/users/0/payment" - Obtener un listado de pagos con tarjeta de crédito
 
 Para probar swager acceder a:
 
-http://localhost:8080/api/v1.0/swagger-ui/index.html
+ ```http://localhost:8080/api/v1.0/swagger-ui/index.html ```
