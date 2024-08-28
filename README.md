@@ -31,7 +31,7 @@ Se utiliza la herramienta/plugin JACOCO integrado con Maven, que se encarga de r
 
 
 
-- REQUERIMIENTOS PARA EJECUTAR EN LOCAL
+- **REQUERIMIENTOS PARA EJECUTAR EN LOCAL**
 
 1.- Tener instalado y configurado java17.
 2.- Tener instalado Maven > 3.8 configurado para que utilice java17.
@@ -41,7 +41,7 @@ Se utiliza la herramienta/plugin JACOCO integrado con Maven, que se encarga de r
 
 
 
-- PASOS PARA EJECUTAR LA APLICACION EN DOCKER
+- **PASOS PARA EJECUTAR LA APLICACION EN DOCKER**
 
 1.- Descargar el proyecto con el comando git " clone https://github.com/xixohhh/app_payments.git " en la ruta donde queremos alojar el repositorio en local. La rama de debemos descargar es RAMA.
 
@@ -60,7 +60,7 @@ Se utiliza la herramienta/plugin JACOCO integrado con Maven, que se encarga de r
 OPCIONAL SI OCURRE ERROR: Crear una red de docker para comunicar los contenedores
  ```network create app-nttdata-network --driver bridge ```
 
-- PASOS PARA EJECUTAR LA APLICACION EN LOCAL/ECPLIPSE
+- **PASOS PARA EJECUTAR LA APLICACION EN LOCAL/ECPLIPSE**
 
 Los parámetros de conexión a la base de datos son:
 
@@ -70,14 +70,21 @@ username:postgres
 password:1234
 
 1.- Descargar el proyecto con el comando git " clone https://github.com/xixohhh/app_payments.git " en la ruta donde queremos alojar el repositorio en local. La rama de debemos descargar es RAMA.
+
 2.- Importar el proyecto en eclipse mediante la herramienta de importacion seleccionando un proyecto Maven existente.
+
 3.- Comprobar que el archivo application.properties la propiedad spring.datasource.url es:
+
  	```spring.datasource.url=jdbc:postgresql://localhost:5432/postgres?currentSchema=payments-db ```
+  
 4.- Levantar una base de datos PostgreSQL con el comando siguiente:
 
 4.1.-- Crear una red de docker para comunicar el contenedor con localhost
+
 	```network create app-nttdata-network --driver bridge ```
+ 
 4.2-- Levantar el contenedor
+
 	 ```docker run --name postgresql-server --network app-nttdata-network -p 5432:5432 --env=POSTGRESQL_PASSWORD=1234 bitnami/postgresql:16  ```
 
 5.- Ejecutamos el script que se encuentra en la raíz del proyecto/db/database.sql
@@ -85,7 +92,8 @@ password:1234
 6.- Ejecutamos el fichero /payments/src/main/java/com/prueba/ntt/payments/PaymentsAppApplication.java que es la clase de inicio de la aplicación spring boot.
 
 
-- PROBAR INFORME JOCOCO
+
+- **PROBAR INFORME JOCOCO**
 
 Para que al construir la aplicación con Maven se genere el informe de cobertura de test, debemos lanzar el siguiente comando Maven:
  ```mvn clean install verify ```
@@ -93,7 +101,7 @@ Para que al construir la aplicación con Maven se genere el informe de cobertura
 En la ruta target/site/jacoco/ se generara dicha información en HTML, que podemos consultar ejecutando index.hmtl.
 
 
-- PROBAR APLICACION
+- **PROBAR APLICACION**
 
 Tanto en LOCAL como en DOCKER se han mapeado los puertos tanto de la aplicacion como de la base de datos para que sean accesibles desde localhost.
 
