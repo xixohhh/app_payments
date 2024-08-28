@@ -30,9 +30,8 @@ GET: "/api/v1.0/users/{userId}/payment" - Obtener un listado de pagos con tarjet
 Se utiliza la herramienta/plugin JACOCO integrado con Maven, que se encarga de realizar informes de análisis sobre cobertura del código mediante los Junit Test realizados. El umbral configurado es 80%.
 
 
-#########################################
+
 - REQUERIMIENTOS PARA EJECUTAR EN LOCAL
-#########################################
 
 1.- Tener instalado y configurado java17.
 2.- Tener instalado Maven > 3.8 configurado para que utilice java17.
@@ -40,9 +39,10 @@ Se utiliza la herramienta/plugin JACOCO integrado con Maven, que se encarga de r
 4.- Para abrir en IDE importar como proyecto Maven, (Creado en Eclipse)
 5.- Tener un contenedor PostgreSQL 16, se facilitara el comando de creación y los parámetros de conexión.
 
-#############################################
+
+
 - PASOS PARA EJECUTAR LA APLICACION EN DOCKER
-#############################################
+
 1.- Descargar el proyecto con el comando git " clone https://github.com/xixohhh/app_payments.git " en la ruta donde queremos alojar el repositorio en local. La rama de debemos descargar es RAMA.
 
 2.- Importar el proyecto en eclipse o el IDE que uticemos mediante la herramienta de importacion seleccionando un proyecto Maven existente.
@@ -61,9 +61,8 @@ OPCIONAL SI OCURRE ERROR:
 -- Crear una red de docker para comunicar los contenedores
 network create app-nttdata-network --driver bridge
 
-######################################################
+
 - PASOS PARA EJECUTAR LA APLICACION EN LOCAL/ECPLIPSE
-######################################################
 
 Los parámetros de conexión a la base de datos son:
 
@@ -87,17 +86,17 @@ password:1234
 
 6.- Ejecutamos el fichero /payments/src/main/java/com/prueba/ntt/payments/PaymentsAppApplication.java que es la clase de inicio de la aplicación spring boot.
 
+
 PROBAR INFORME JOCOCO
----------------------
+
 Para que al construir la aplicación con Maven se genere el informe de cobertura de test, debemos lanzar el siguiente comando Maven:
 
 mvn clean install verify
 
 En la ruta target/site/jacoco/ se generara dicha información en HTML, que podemos consultar ejecutando index.hmtl.
 
-##############################
+
 - PROBAR APLICACION
-##############################
 
 Tanto en LOCAL como en DOCKER se han mapeado los puertos tanto de la aplicacion como de la base de datos para que sean accesibles desde localhost.
 
