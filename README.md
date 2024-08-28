@@ -57,8 +57,7 @@ Se utiliza la herramienta/plugin JACOCO integrado con Maven, que se encarga de r
 
 5.- Desde consola, en el repositorio git donde descargamos el proyecto, ejecutamos el comando " docker compose up -d " y esperamos que cargue los contenedores (Si es la primera vez tarda un poco).
 
-OPCIONAL SI OCURRE ERROR: 
--- Crear una red de docker para comunicar los contenedores
+OPCIONAL SI OCURRE ERROR: Crear una red de docker para comunicar los contenedores
  ```network create app-nttdata-network --driver bridge ```
 
 - PASOS PARA EJECUTAR LA APLICACION EN LOCAL/ECPLIPSE
