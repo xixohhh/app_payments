@@ -4,12 +4,12 @@ La aplicación Payments se basa en:
 
 Dos Docker Images
 
---POSTGRESQL 16:  Base de datos (NO PERSISTENTE) se genera cuando creas el contenedor
+**POSTGRESQL 16**   Base de datos (NO PERSISTENTE) se genera cuando creas el contenedor
 
-docker pull bitnami/postgresql:16
+ ```docker pull bitnami/postgresql:16 ```
 
--- JDK17: Contenedor con instalación mínima para la ejecución de aplicaciones java version17, en el cual ejecutaremos el microservicio Java.
-docker pull openjdk:17-jdk-alpine
+**JDK17**  Contenedor con instalación mínima para la ejecución de aplicaciones java version17, en el cual ejecutaremos el microservicio Java.
+ ```docker pull openjdk:17-jdk-alpine ```
 
 Un microservicio desarrollado con Spring-boot que utiliza las dependencias:
 
