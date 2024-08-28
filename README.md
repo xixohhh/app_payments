@@ -74,13 +74,13 @@ password:1234
 1.- Descargar el proyecto con el comando git " clone https://github.com/xixohhh/app_payments.git " en la ruta donde queremos alojar el repositorio en local. La rama de debemos descargar es RAMA.
 2.- Importar el proyecto en eclipse mediante la herramienta de importacion seleccionando un proyecto Maven existente.
 3.- Comprobar que el archivo application.properties la propiedad spring.datasource.url es:
- 	-> spring.datasource.url=jdbc:postgresql://localhost:5432/postgres?currentSchema=payments-db
+ 		-> spring.datasource.url=jdbc:postgresql://localhost:5432/postgres?currentSchema=payments-db
 4.- Levantar una base de datos PostgreSQL con el comando siguiente:
 
-	4.1.-- Crear una red de docker para comunicar el contenedor con localhost
-	network create app-nttdata-network --driver bridge
-	4.2-- Levantar el contenedor
-	docker run --name postgresql-server --network app-nttdata-network -p 5432:5432 --env=POSTGRESQL_PASSWORD=1234 bitnami/postgresql:16 
+4.1.-- Crear una red de docker para comunicar el contenedor con localhost
+		network create app-nttdata-network --driver bridge
+4.2-- Levantar el contenedor
+		docker run --name postgresql-server --network app-nttdata-network -p 5432:5432 --env=POSTGRESQL_PASSWORD=1234 bitnami/postgresql:16 
 
 5.- Ejecutamos el script que se encuentra en la raíz del proyecto/db/database.sql
 
