@@ -20,5 +20,7 @@ public class UserPayment {
 	private String cardNumber;
 
 	private LocalDateTime paymentDate;
+	
+	private String description;
 
 }

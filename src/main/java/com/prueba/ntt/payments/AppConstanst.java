@@ -8,4 +8,6 @@ public class AppConstanst {
 	
 	public static final int PAYMENTS_MAX_CREDITCARD_SIZE = 25;
 	public static final int PAYMENTS_MIN_CREDITCARD_SIZE = 10;
+	
+	public static final String API_BASE_URL = "/api/v1.0";
 }

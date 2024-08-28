@@ -16,7 +16,7 @@ import jakarta.servlet.http.HttpServletRequest;
 public class ExceptionController {
 
 	@ExceptionHandler(GenericAppException.class)
-	ResponseEntity<ErrorResponse> genericAppExceptionHandler(
+	public ResponseEntity<ErrorResponse> genericAppExceptionHandler(
 			GenericAppException ex, HttpServletRequest request) {
 		
 		ErrorResponse errorResponse = new ErrorResponse();
@@ -28,7 +28,7 @@ public class ExceptionController {
 		return new ResponseEntity<>(errorResponse,HttpStatus.valueOf(ex.getHttpCode()));
 	}
 	@ExceptionHandler(HttpMessageNotReadableException.class)
-	ResponseEntity<ErrorResponse> conversionExceptionHandler(
+	public ResponseEntity<ErrorResponse> conversionExceptionHandler(
 			HttpMessageNotReadableException ex, HttpServletRequest request) {
 		
 		ErrorResponse errorResponse = new ErrorResponse();
@@ -41,7 +41,7 @@ public class ExceptionController {
 	}
 	
 	@ExceptionHandler(MethodArgumentNotValidException.class)
-	ResponseEntity<ErrorResponse> validationExceptionHandler(
+	public ResponseEntity<ErrorResponse> validationExceptionHandler(
 			MethodArgumentNotValidException ex, HttpServletRequest request) {
 		
 		ErrorResponse errorResponse = new ErrorResponse();

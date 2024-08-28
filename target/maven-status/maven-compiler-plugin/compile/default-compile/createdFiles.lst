@@ -28,5 +28,4 @@ com\prueba\ntt\payments\adapter\out\persistence\PaymentPersistenceAdapter.class
 com\prueba\ntt\payments\AppConstanst.class
 com\prueba\ntt\payments\application\port\out\LoadPaymentPort.class
 com\prueba\ntt\payments\domain\User.class
-com\prueba\ntt\payments\application\exception\PaymentAmmountInvalidException.class
 com\prueba\ntt\payments\application\port\in\DoPaymentPort.class

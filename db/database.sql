@@ -38,6 +38,7 @@ CREATE TABLE IF NOT EXISTS "payments-db".users_payments
     ammount numeric(12,2) NOT NULL,
     payment_date timestamp without time zone NOT NULL,
     card_number character varying(25) COLLATE pg_catalog."default" NOT NULL,
+    description text COLLATE pg_catalog."default",
     CONSTRAINT user_payments_pkey PRIMARY KEY (id_payment),
     CONSTRAINT fk_user_payments FOREIGN KEY (id_user)
         REFERENCES "payments-db".users (id_user) MATCH SIMPLE
@@ -59,9 +60,9 @@ COMMENT ON TABLE "payments-db".users_payments
 -- SECUENCIA PARA PAYMENTS 
 
 CREATE SEQUENCE "payments-db".users_payments_seq
-    INCREMENT 50
-    START 0
-    MINVALUE 0
+    INCREMENT 1
+    START 1
+    MINVALUE 1
     MAXVALUE 9999999999;
 
 ALTER SEQUENCE "payments-db".users_payments_seq
@@ -73,9 +74,9 @@ ALTER SEQUENCE "payments-db".users_payments_seq
 -- SECUENCIA PARA USERS 
 
 CREATE SEQUENCE "payments-db".users_seq
-    INCREMENT 50
-    START 0
-    MINVALUE 0
+    INCREMENT 1
+    START 1
+    MINVALUE 1
     MAXVALUE 9999999;
 
 ALTER SEQUENCE "payments-db".users_seq
@@ -88,4 +89,7 @@ ALTER SEQUENCE "payments-db".users_seq
 -- INSERTAR USUARIO PRUEBAS
 
 INSERT INTO "payments-db".users(id_user, user_name, name, first_surname, second_surname) VALUES (nextval('payments-db.users_seq'), 'test', 'test', 'test', 'test');
+INSERT INTO "payments-db".users_payments(id_payment, id_user, ammount, payment_date, card_number) VALUES (nextval('payments-db.users_payments_seq'),currval('payments-db.users_seq') , 150.00, '2024-05-12T13:00' , '213131231312');
+INSERT INTO "payments-db".users_payments(id_payment, id_user, ammount, payment_date, card_number) VALUES (nextval('payments-db.users_payments_seq'),currval('payments-db.users_seq') , 350.00, '2024-05-12T14:00' , '213131231312');
+
 commit;
