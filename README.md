@@ -115,7 +115,7 @@ Tanto en LOCAL como en DOCKER se han mapeado los puertos tanto de la aplicacion 
 
 Para probar la aplicacion nos ayudamos de un cliente HTTP como por ejemplo Postman.
 
-POST: "localhost:8080/api/v1.0/users/0/payment" - Añadir un pago con tarjeta de credito
+POST: "localhost:8080/api/v1.0/users/1/payment" - Añadir un pago con tarjeta de credito
 
 Payload/Body:
 
@@ -128,7 +128,7 @@ Payload/Body:
 }
 ```
 
-GET: "localhost:8080/api/v1.0/users/0/payment" - Obtener un listado de pagos con tarjeta de crédito
+GET: "localhost:8080/api/v1.0/users/1/payment" - Obtener un listado de pagos con tarjeta de crédito
 
 Para probar swager acceder a:
 
