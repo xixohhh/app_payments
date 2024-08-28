@@ -5,7 +5,9 @@ import java.time.LocalDateTime;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -19,7 +21,8 @@ import lombok.NoArgsConstructor;
 public class PaymentEntity {
 	
 	@Id
-	@GeneratedValue
+	@SequenceGenerator(name = "users_payments_seq", sequenceName = "\"payments-db\".users_payments_seq",allocationSize = 1)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "users_payments_seq")
 	@Column(name="id_payment")
 	private Long id;
 	
@@ -35,5 +38,7 @@ public class PaymentEntity {
 	@Column(name="payment_date")
 	private LocalDateTime paymentDate;
 	
+	@Column(name="description")
+	private String description;
 	
 }

@@ -4,6 +4,8 @@ import com.prueba.ntt.payments.domain.UserPayment;
 
 public class PaymentMapper {
 	
+	private PaymentMapper() {}
+	
 	public static UserPayment entityToDomain(PaymentEntity e) {
 		
 		UserPayment u =  new UserPayment();
@@ -13,7 +15,7 @@ public class PaymentMapper {
 		u.setAmmount(e.getAmmount());
 		u.setCardNumber(e.getCardNumber());
 		u.setPaymentDate(e.getPaymentDate());
-		
+		u.setDescription(e.getDescription());
 		return u;
 	}
 	
@@ -26,7 +28,7 @@ public class PaymentMapper {
 		u.setAmmount(e.getAmmount());
 		u.setCardNumber(e.getCardNumber());
 		u.setPaymentDate(e.getPaymentDate());
-		
+		u.setDescription(e.getDescription());
 		return u;
 	}
 }

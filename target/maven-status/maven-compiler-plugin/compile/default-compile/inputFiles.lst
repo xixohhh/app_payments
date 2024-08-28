@@ -13,7 +13,6 @@ F:\wokspaces\repo_git\src\main\java\com\prueba\ntt\payments\application\exceptio
 F:\wokspaces\repo_git\src\main\java\com\prueba\ntt\payments\application\exception\ErrorResponse.java
 F:\wokspaces\repo_git\src\main\java\com\prueba\ntt\payments\application\exception\ExceptionController.java
 F:\wokspaces\repo_git\src\main\java\com\prueba\ntt\payments\application\exception\GenericAppException.java
-F:\wokspaces\repo_git\src\main\java\com\prueba\ntt\payments\application\exception\PaymentAmmountInvalidException.java
 F:\wokspaces\repo_git\src\main\java\com\prueba\ntt\payments\application\exception\UserNotFoundException.java
 F:\wokspaces\repo_git\src\main\java\com\prueba\ntt\payments\application\port\in\DoPaymentCommand.java
 F:\wokspaces\repo_git\src\main\java\com\prueba\ntt\payments\application\port\in\DoPaymentPort.java

@@ -13,10 +13,7 @@ import jakarta.validation.Valid;
 
 import org.springframework.web.bind.annotation.RestController;
 
-import com.prueba.ntt.payments.AppConstanst;
 import com.prueba.ntt.payments.adapter.in.web.dto.PaymentDTO;
-import com.prueba.ntt.payments.application.exception.BodyRequestMissingException;
-import com.prueba.ntt.payments.application.exception.PaymentAmmountInvalidException;
 import com.prueba.ntt.payments.application.port.in.DoPaymentCommand;
 import com.prueba.ntt.payments.application.port.in.DoPaymentPort;
 import com.prueba.ntt.payments.common.WebAdapter;
@@ -34,7 +31,7 @@ public class DoPaymentController {
 	@PostMapping(path = "/users/{userId}/payment",
 			consumes =  MediaType.APPLICATION_JSON_VALUE, 
 			produces = MediaType.APPLICATION_JSON_VALUE)
-	void transfer(
+	public void transfer(
 			@PathVariable("userId") Long userId,
 			@RequestBody(description = "Payment to do", required = true,
 	                content = @Content(
@@ -43,30 +40,6 @@ public class DoPaymentController {
 			) {
 
 		DoPaymentCommand command = new DoPaymentCommand();
-		
-		command.setIdUser(userId);
-		
-		
-		if(userId == null) {
-			throw new BodyRequestMissingException("Id usuario no presente en peticion de pago.");
-		}
-		//VALIDACIONES ALTERNATIVAS A VALIDACIONES HIBERNATE
-		if(!dto.isPresent()) {
-			throw new BodyRequestMissingException("No se encuentra bodyRequest al realizar el pago.");
-		}
-		
-		if(dto.get().getCreditCard() == null ) {
-			
-			throw new BodyRequestMissingException("No se encuentra el numero de tarjeta.");
-		}
-		
-		
-		if(dto.get().getAmmount() == null || (
-				dto.get().getAmmount() > AppConstanst.PAYMENTS_MAX_AMMOUNT_VALUE
-				|| dto.get().getAmmount()< AppConstanst.PAYMENTS_MIN_AMMOUNT_VALUE )) {
-			
-			throw new PaymentAmmountInvalidException("Valor incorrecto de la propiedad ammount.");
-		}
 		
 		command.setAmmount(dto.get().getAmmount());
 		command.setIdUser(userId);

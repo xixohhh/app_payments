@@ -4,6 +4,8 @@ import com.prueba.ntt.payments.domain.User;
 
 public class UserMapper {
 	
+	private UserMapper() {}
+	
 	public static User entityToDomain(UserEntity e) {
 		User u = new User();
 		u.setIdUser(e.getId());
