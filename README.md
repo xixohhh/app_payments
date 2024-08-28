@@ -51,7 +51,7 @@ Se utiliza la herramienta/plugin JACOCO integrado con Maven, que se encarga de r
 
 - **PASOS PARA EJECUTAR LA APLICACION EN DOCKER**
 
-1.- Descargar el proyecto con el comando git " clone https://github.com/xixohhh/app_payments.git " en la ruta donde queremos alojar el repositorio en local. La rama de debemos descargar es RAMA.
+1.- Descargar el proyecto con el comando ```git clone https://github.com/xixohhh/app_payments.git``` en la ruta donde queremos alojar el repositorio en local. La rama de debemos descargar es develop.
 
 2.- Importar el proyecto en eclipse o el IDE que uticemos mediante la herramienta de importacion seleccionando un proyecto Maven existente.
 
@@ -77,7 +77,7 @@ port:5432
 username:postgres
 password:1234
 
-1.- Descargar el proyecto con el comando git " clone https://github.com/xixohhh/app_payments.git " en la ruta donde queremos alojar el repositorio en local. La rama de debemos descargar es RAMA.
+1.- Descargar el proyecto con el comando ```git clone https://github.com/xixohhh/app_payments.git``` en la ruta donde queremos alojar el repositorio en local. La rama de debemos descargar es develop.
 
 2.- Importar el proyecto en eclipse mediante la herramienta de importacion seleccionando un proyecto Maven existente.
 
