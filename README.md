@@ -14,9 +14,13 @@ docker pull openjdk:17-jdk-alpine
 Un microservicio desarrollado con Spring-boot que utiliza las dependencias:
 
 spring-boot-starter-data-jpa
+
 spring-boot-starter-web
+
 org.projectlombok.lombok
+
 org.springdoc.springdoc-openapi-starter-webmvc-ui
+
 org.postgresql.postgresql
 
 La aplicación Spring-boot levantara un servidor tomcat donde se ejecutara el microservicio Payments que consta de un Api con los siguientes endpoints
@@ -34,9 +38,13 @@ Se utiliza la herramienta/plugin JACOCO integrado con Maven, que se encarga de r
 - **REQUERIMIENTOS PARA EJECUTAR EN LOCAL**
 
 1.- Tener instalado y configurado java17.
+
 2.- Tener instalado Maven > 3.8 configurado para que utilice java17.
+
 3.- Tener Docker y Docker compose instalado para ejecutar el archivo compose.
+
 4.- Para abrir en IDE importar como proyecto Maven, (Creado en Eclipse)
+
 5.- Tener un contenedor PostgreSQL 16, se facilitara el comando de creación y los parámetros de conexión.
 
 
