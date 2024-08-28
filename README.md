@@ -48,11 +48,12 @@ Se utiliza la herramienta/plugin JACOCO integrado con Maven, que se encarga de r
 2.- Importar el proyecto en eclipse o el IDE que uticemos mediante la herramienta de importacion seleccionando un proyecto Maven existente.
 
 3.- Comprobar que el archivo application.properties la propiedad spring.datasource.url es:
-	-> spring.datasource.url=jdbc:postgresql://database:5432/postgres?currentSchema=payments-db
+	```spring.datasource.url=jdbc:postgresql://database:5432/postgres?currentSchema=payments-db ```
+
 
 4.- Desde consola navegar al repositorio git donde descargamos el proyecto y ejecutar el comando
 
- "mvn clean install -Dmaven.test.skip=true"
+  ```mvn clean install -Dmaven.test.skip=true ```
 
 5.- Desde consola, en el repositorio git donde descargamos el proyecto, ejecutamos el comando " docker compose up -d " y esperamos que cargue los contenedores (Si es la primera vez tarda un poco).
 
